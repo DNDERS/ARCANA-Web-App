@@ -33,44 +33,39 @@ function App() {
     // Fetch initials when the component mounts
     getInitials();
   }, []);
-
   
-  const backgroundStyle = {
-    backgroundColor: 'rgba(25, 25, 25, 1)',
-    width: '100vw',
-    height: '100vh',
-    position: 'relative',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    color: 'white',
-    fontSize: '5vmin',
-    fontFamily: 'Roboto, sans-serif',
-  };
-
+    
   return (
-    <div>
-    <div className="App" style={backgroundStyle}>
-      <div className="ContentWrapper">
+    <>
+      <div className="diagonal-section">
         <img src="/book.png" alt="Book Icon" className="MenuIcon" />
-        <p className="mb-3">Enter Initials</p>
+        <p style={{
+          color: '#FFF',
+          textAlign: 'center',
+          fontFamily: 'Roboto',
+          fontSize: '64px',
+          fontStyle: 'normal',
+          fontWeight: 800,
+          lineHeight: '135%', /* 86.4px */
+          letterSpacing: '-1.28px',
+        }} className="mb-3">
+          Enter Initials
+        </p>
         <input
           type="text"
-          placeholder="Your Initials"
+          placeholder="Initials Here"
           value={initials}
           onChange={handleInputChange}
-          className="form-control mb-3 custom-input"  // Add a custom class
+          className="form-control mb-3 custom-input"
         />
-        <button onClick={storeInitials} className="btn btn-primary">
-          Submit
+        <button onClick={storeInitials} className="btn btn-primary custom-button">
+          Enter
         </button>
       </div>
       <div className='Footer'>
         <p>ARCANA</p>
       </div>
-    </div>
-    </div>
+    </>
   );
 }
 

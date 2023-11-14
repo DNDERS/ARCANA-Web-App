@@ -1,31 +1,16 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
-.Landing {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 5vmin;
-  font-family: 'Roboto', sans-serif;
-
-}
-
-.ContentWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent scrolling */
 }
 
 .MenuIcon {
   width: 100vh;
   height: auto;
-  margin-top: -30vh;
+  margin-top: -20vh;
 }
-
 .Footer {
   background-color: black;
   color: white;
@@ -45,7 +30,43 @@ input {
 
 .custom-input {
   width: 150px; /* Adjust the width as needed */
+
 }
 
 /* Update the background colors based on Figma frames */
+
+
+
+.diagonal-section {
+  flex: 1;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 170, 90, .8) 0%,
+    rgba(255, 170, 90, 1) 10%, /* Adjust the stop to make the colored section wider */
+    black 45%, /* Adjust the stop to make the black section slimmer */
+    black 55%, /* Adjust the stop to make the black section slimmer */
+    rgba(255, 120, 90, 1) 90%, /* Adjust the stop to make the colored section wider */
+    rgba(255, 120, 90, .8) 100%
+  );
+  /* Adjust the stops for a smoother transition */
+  padding: 10rem 20%;
+  position: relative;
+  z-index: 0;
+}
+
+.custom-button {
+  background-color: white;
+  color: black; /* Change the text color as needed */
+  border: 2px solid yellow; /* Yellow outline */
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+
 
